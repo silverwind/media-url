@@ -2,7 +2,10 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {fileURLToPath} from 'node:url';
 
 export default {
-  entry: fileURLToPath(new URL('index.css', import.meta.url)),
+  entry: {
+    "theme-arc-green": fileURLToPath(new URL('css/themes/theme-arc-green.css', import.meta.url)),
+    "theme-auto": fileURLToPath(new URL('css/themes/theme-auto.css', import.meta.url)),
+  },
   output: {
     path: fileURLToPath(new URL('dist', import.meta.url)),
   },
